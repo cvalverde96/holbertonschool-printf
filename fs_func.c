@@ -31,6 +31,11 @@ int fs_string(va_list args)
 	char *string = va_arg(args, char *);
 	int len = 0;
 
+	if (string == NULL)
+	{
+		string = "(null)";
+	}
+
 	while (string[len] != '\0')
 	{
 		_putchar(string[len]);
