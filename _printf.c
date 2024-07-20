@@ -10,6 +10,7 @@
 int _printf(const char *format, ...)
 {
 	int index, count = 0;
+	int (*s_f)(va_list);
 
 	va_list args;
 
@@ -20,7 +21,7 @@ int _printf(const char *format, ...)
 		if (format[index] == '%')
 		{
 			index++;
-			int (*s_f)(va_list) = get_format_specifier_func(format[index]);
+			s_f = get_format_specifier_func(format[index]);
 
 			if (s_f != NULL)
 			{
