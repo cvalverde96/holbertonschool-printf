@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			index++;
 			if (format[index] == '\0')
 			{
-				va_end (args);
+				va_end(args);
 				return (count);
 			}
 
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 			count = count + _putchar(format[index]);
 		}
 	}
-	return (count);
 	va_end(args);
+	return (count);
 }
 
