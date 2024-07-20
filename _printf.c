@@ -19,8 +19,20 @@ int _printf(const char *format, ...)
 	{
 		if (format[index] == '%')
 		{
-			count = count + (get_format_specifier_func(format[index + 1]))(args);
 			index++;
+			int (*s_f)(va_list) = get_format_specifier_func(format[index]);
+
+			if (s_f != NULL)
+			{
+				count = count + s_f(args);
+			}
+
+			else
+			{
+				count = count + _putchar('%');
+				count = count + _putchar(format[index]);
+			}
+			
 		}
 
 		else
