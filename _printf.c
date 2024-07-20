@@ -10,9 +10,7 @@
 int _printf(const char *format, ...)
 {
 	int index, count = 0;
-
 	va_list args;
-
 	int (*s_f)(va_list);
 
 	va_start(args, format);
@@ -24,6 +22,7 @@ int _printf(const char *format, ...)
 			index++;
 			if (format[index] == '\0')
 			{
+				va_end (args);
 				return (count);
 			}
 
