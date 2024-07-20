@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	int index, count = 0;
-	int (*s_f)(va_list);
+	int (*s_f)(va_list) = 0;
 
 	va_list args;
 
