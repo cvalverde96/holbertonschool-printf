@@ -2,6 +2,7 @@
 #define manin_h
 
 #include <stdarg.h>
+#include <stddef.h>
 
 /**
  * struct format_specifier_function_struct - estructura
