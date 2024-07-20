@@ -10,9 +10,10 @@
 int _printf(const char *format, ...)
 {
 	int index, count = 0;
-	int (*s_f)(va_list) = 0;
 
 	va_list args;
+
+	int (*s_f)(va_list);
 
 	va_start(args, format);
 
