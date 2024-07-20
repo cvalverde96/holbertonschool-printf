@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 			index++;
 			if (format[index] == '\0')
 			{
-				break;
+				return (count);
 			}
 
 			s_f = get_format_specifier_func(format[index]);
