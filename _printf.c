@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 				count = count + _putchar('%');
 				count = count + _putchar(format[index]);
 			}
-			
+
 		}
 
 		else
