@@ -22,6 +22,11 @@ int _printf(const char *format, ...)
 		if (format[index] == '%')
 		{
 			index++;
+			if (format[index] == '\0')
+			{
+				break;
+			}
+
 			s_f = get_format_specifier_func(format[index]);
 
 			if (s_f != NULL)
@@ -42,9 +47,7 @@ int _printf(const char *format, ...)
 			count = count + _putchar(format[index]);
 		}
 	}
-
 	return (count);
-
 	va_end(args);
 }
 
