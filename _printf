@@ -1,0 +1,37 @@
+.TH _PRINTF 1 "Julio 2024" "1.0" "manual de _printf"
+.SH NAME
+_printf \- formatea e imprime data
+.SH SYNOPSIS
+.B _printf
+.IR "format" ", " "..."
+.SH DESCRIPTION
+.B _printf
+es una implementacion creada por Carlos E. Valverde Rodriguez para imitar lo que hace printf.
+Toma un string llamado format y a traves de varios loops y verificaciones imprime el string a base de los format specifiers.
+.PP
+Los format specifiers que _printf interpreta son:
+.TP
+.B %d
+Imprime un numero integro como un numero decimal.
+.TP
+.B %i
+Imprime un numero integro como un numero decimal.
+.TP
+.B %s
+Imprime un string(oraccion/coleccion de caracteres).
+.TP
+.B %c
+Imprime unicamente un caracter.
+.TP
+.B %%
+Imprime tal cual el signo de porcentaje(%).
+.SH RETURN VALUE
+La funcion retorna la cantidad de caracteres que va a imprimir.
+.SH EXAMPLES
+.B _printf
+.RI "(\"Hello, %s!\", \"world\");"
+.PP
+Imprime "Hello world!" a la pantalla, standard out.
+.SH AUTHORS
+Carlos E. Valverde Rodriguez de Morales Bird Alvarez
+
