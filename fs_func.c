@@ -57,3 +57,46 @@ int fs_percentage(va_list args)
 	return (_putchar('%'));
 }
 
+/**
+ * fs_number - function para validar un numero y poder imprimilo como string
+ * @args: argumentos de va_list,
+ * Return: retornando la cantidad de caracters
+ */
+
+int fs_number(va_list args)
+{
+	int numero = va_arg(args, int);
+	int count = 0;
+	char buffer[12];
+	int i = 0;
+	unsigned int numero_absoluto;
+
+	if (numero < 0)
+	{
+		count = count + _putchar('-');
+		numero_absoluto = -numero;
+	}
+	else
+	{
+		numero_absoluto = numero;
+	}
+
+	if (numero_absoluto == 0)
+	{
+		count = count + _putchar('0');
+		return (count);
+	}
+
+	while (numero_absoluto != 0)
+	{
+		buffer[i++] = (numero_absoluto % 10) + '0';
+		numero_absoluto = numero_absoluto / 10;
+	}
+
+	for (i--; i >= 0; i--)
+	{
+		count = count + _putchar(buffer[i]);
+	}
+
+	return (count);
+}

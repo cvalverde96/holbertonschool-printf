@@ -15,6 +15,8 @@ int (*get_format_specifier_func(char s))(va_list)
 		{"c", fs_character},
 		{"s", fs_string},
 		{"%", fs_percentage},
+		{"d", fs_number},
+		{"i", fs_number},
 		{NULL, NULL}
 	};
 
